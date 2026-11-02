@@ -169,7 +169,8 @@ footer {
     document.querySelectorAll('.shot').forEach(function (btn) {
       btn.addEventListener('click', function () {
         if (!btn.querySelector('img')) return;
-        viewerImg.src = btn.dataset.full;
+      viewerImg.src = btn.querySelector('img').src;
+      viewerImg.alt = btn.querySelector('img').alt;
         viewer.showModal();
       });
     });
